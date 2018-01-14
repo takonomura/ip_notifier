@@ -25,7 +25,7 @@ get_ip_addresses() {
 }
 
 send_to_slack() {
-  curl -X POST --data-urlencode 'payload={"text":"local IP address has changed:\n```'"$1"'```"}' "$2"
+  curl -X POST --data-urlencode 'payload={"text":"local IP address has changed:\n```\n'"$1"'\n```"}' "$2"
 }
 
 while true; do
